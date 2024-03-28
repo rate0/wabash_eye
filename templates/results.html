@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Who are you</title>
+</head>
+<body>
+    <div class="container">
+        <h1>I know who you really are</h1>
+        <div class="result-section">
+            <img src="{{ url_for('static', filename='eye.png') }}" alt="I'm watching" class="icon">
+            <div class="result-info">
+                <p>You're so... interesting. I've found some information about you:</p>
+                <ul>
+                    <li>Name: {{ person_info['name'] }}</li>
+                    <li>Age: {{ person_info['age'] }}</li>
+                    <li>Gender: {{ person_info['gender'] }}</li>
+                    <li>Additional info: {{ person_info['info'] }}</li>
+                </ul>
+                <p>Don't turn around...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

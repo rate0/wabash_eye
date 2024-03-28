@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>404 Not Found</title>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='404.jpg') }}" alt="Not Found" class="icon" style="width: 400px; height: 400px;">
+        <h1>404</h1>
+        <p>Don't look for what you don't want to see.</p>
+        <p class="disclaimer">* The less you know, the better you sleep...</p>
+    </div>
+</body>
+</html>

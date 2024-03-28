@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Add Person</title>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='icon.gif') }}" alt="Website Icon" class="icon">
+        <h1>Welcome to the w4ba5h</h1>
+        <form action="/add" method="post" enctype="multipart/form-data">
+            <div class="form-section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <br>
+            <div class="form-section">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <br>
+            <div class="form-section">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-section">
+                <label for="info">Additional Info:</label>
+            </div>
+            <br>
+            <div class="form-section">
+                <textarea id="info" name="info" rows="4" required></textarea>
+            </div>
+            <br>
+            <div class="form-section">
+                <label for="photo" class="upload-label">
+                    <span>Upload Photo</span>
+                    <input type="file" name="photo" id="photo" accept="image/jpeg, image/png" required>
+                </label>
+            </div>
+            <br>
+            <input type="submit" value="Add Person" class="upload-btn">
+        </form>
+        <p class="disclaimer">* All submitted information is securely processed and added to the database.</p>
+    </div>
+</body>
+</html>

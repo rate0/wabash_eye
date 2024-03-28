@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>EYE OF THE WABASH</title>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='icon.gif') }}" alt="Website Icon" class="icon">
+        <h1>EYE OF THE WABASH</h1>
+        <p>I'm always watching you</p>
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+            <div class="upload-section">
+                <label for="fileToUpload" class="upload-label">
+                    <span>Choose Image</span>
+                    <input type="file" name="file" id="file" accept="image/*">
+                </label>
+            </div>
+            <br>
+            <input type="submit" value="Upload" class="upload-btn">
+        </form>
+        <p class="disclaimer">* All uploaded images are securely processed and not stored.</p>
+    </div>
+</body>
+</html>
